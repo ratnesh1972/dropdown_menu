@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --primary-color : coral;
+    --primary-dark-color : chocolate;
+    --secondary-color : #f3f4ed;
+    --secondary-dark-color : #bbbbbb;
+    --text-dark : #1b1717;
+    --text-light : #ffffff;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+/* Navbar */
+#navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    color : var(--text-dark);
+    padding: 1rem;
+    position: relative;
+}
+
+#navbar ul li a{
+    text-decoration:none;
+    color : var(--text-dark);
+}
+
+#navbar ul li ul{
+    display: none;
+}
+
+#navbar ul li:hover{
+    cursor: pointer;
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+#navbar ul li:hover a{
+    color: var(--text-light);
+}
+
+#navbar ul li:hover ul{
+    position: absolute;
+    left: 0;
+    display: block;
+    background: #f3f4ed;
+    width: 250px;
+    margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li{
+    display: block;
+    color: var(--text-dark);
+    background: none;
+}
+
+#navbar ul li:hover ul li a{
+    color: var(--text-dark);
+    background: none;
+}
+
+#navbar ul li:hover ul li span{
+    padding: .1rem .5rem;
+    background: var(--primary-color);
+    color: var(--text-light);
+    border-radius: 5px;
+    float: right;
+}
+
+
+#navbar ul li:hover ul li:hover{
+    color: var(--text-light);
+    background: var(--secondary-dark-color);
+}
+
+#navbar ul li:hover ul li:hover a{
+    color: var(--text-light);
+}
+
+#navbar ul li:hover ul li:hover span{
+    color: var(--text-light);
+    background: var(--primary-dark-color);
+}
+/* Media Queries */
+@media (max-width:600px){
+    #navbar ul li{
+        display: block;
+    }
+    #navbar ul li:hover ul{
+        position: relative;
+        width: 100%;
+    }
+    
+}
+/* Showcase */
+#showcase{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+#showcase h1{
+    font-size: 2rem;
+}
